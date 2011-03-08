@@ -1,4 +1,5 @@
 Promo::Application.routes.draw do
+
   resources :affiliate_networks
 
   # The priority is based upon order of creation:
