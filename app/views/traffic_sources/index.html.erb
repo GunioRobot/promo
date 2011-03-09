@@ -1,0 +1,27 @@
+<h1>Listing traffic_sources</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>User account</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @traffic_sources.each do |traffic_source| %>
+  <tr>
+    <td><%= traffic_source.name %></td>
+    <td><%= traffic_source.type %></td>
+    <td><%= traffic_source.user_account %></td>
+    <td><%= link_to 'Show', traffic_source %></td>
+    <td><%= link_to 'Edit', edit_traffic_source_path(traffic_source) %></td>
+    <td><%= link_to 'Destroy', traffic_source, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Traffic source', new_traffic_source_path %>

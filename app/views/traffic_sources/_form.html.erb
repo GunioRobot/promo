@@ -1,0 +1,29 @@
+<%= form_for(@traffic_source) do |f| %>
+  <% if @traffic_source.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traffic_source.errors.count, "error") %> prohibited this traffic_source from being saved:</h2>
+
+      <ul>
+      <% @traffic_source.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :user_account %><br />
+    <%= f.text_field :user_account %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

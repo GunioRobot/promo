@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @traffic_source.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @traffic_source.type %>
+</p>
+
+<p>
+  <b>User account:</b>
+  <%= @traffic_source.user_account %>
+</p>
+
+
+<%= link_to 'Edit', edit_traffic_source_path(@traffic_source) %> |
+<%= link_to 'Back', traffic_sources_path %>
